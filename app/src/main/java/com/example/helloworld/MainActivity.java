@@ -53,6 +53,6 @@ public class MainActivity extends AppCompatActivity {
         button3.setOnClickListener(v->{
             findViewById(R.id.main).setBackgroundColor(Color.rgb(r.nextInt(255),r.nextInt(255),r.nextInt(255)));
         });
-
+        //comment for revert
     }
 }
