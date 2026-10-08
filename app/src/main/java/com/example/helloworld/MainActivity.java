@@ -39,12 +39,19 @@ public class MainActivity extends AppCompatActivity {
         TextView tekstas = findViewById(R.id.textView);
         EditText editintasTekstas = findViewById(R.id.editTextText);
         Button button2 = findViewById(R.id.button2);
+        Button button3 = findViewById(R.id.button3);
+
         button1.setOnClickListener(v -> {
 
             tekstas.setText(editintasTekstas.getText());
         });
+
         button2.setOnClickListener(v->{
             tekstas.setTextColor(Color.rgb(r.nextInt(255),r.nextInt(255),r.nextInt(255)));
+        });
+
+        button3.setOnClickListener(v->{
+            findViewById(R.id.main).setBackgroundColor(Color.rgb(r.nextInt(255),r.nextInt(255),r.nextInt(255)));
         });
 
     }
