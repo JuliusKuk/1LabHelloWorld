@@ -1,5 +1,6 @@
 package com.example.helloworld;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -10,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,13 +32,20 @@ public class MainActivity extends AppCompatActivity {
 
             return insets;
         });
+
+        Random r = new Random();
+
         Button button1 = findViewById(R.id.button);
         TextView tekstas = findViewById(R.id.textView);
         EditText editintasTekstas = findViewById(R.id.editTextText);
-
+        Button button2 = findViewById(R.id.button2);
         button1.setOnClickListener(v -> {
 
             tekstas.setText(editintasTekstas.getText());
         });
+        button2.setOnClickListener(v->{
+            tekstas.setTextColor(Color.rgb(r.nextInt(255),r.nextInt(255),r.nextInt(255)));
+        });
+
     }
 }
